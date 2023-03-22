@@ -1,5 +1,13 @@
 function reverseString(str) {
   // type your code here
+  const split = str.split("")
+  const backwards = []
+  for (let i = split.length - 1; i !== -1; i--){
+    backwards.push(split[i])
+  }
+  const join = backwards.join("")
+  return join
+
 }
 
 if (require.main === module) {
@@ -11,6 +19,7 @@ if (require.main === module) {
 
   console.log("Expecting: 'ybabtac'");
   console.log("=>", reverseString("catbaby"));
+
 }
 
 module.exports = reverseString;

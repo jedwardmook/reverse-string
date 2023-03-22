@@ -1,5 +1,13 @@
 def reverse_string(str)
   # type your code in here
+  split = str.split('')
+  amount = split.length
+  backwards_arr = []
+  until amount == 0 do
+    backwards_arr.push(split[amount - 1])
+    amount = amount - 1
+  end
+  backwards = backwards_arr.join()
 end
 
 if __FILE__ == $PROGRAM_NAME
